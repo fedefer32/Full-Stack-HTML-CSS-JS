@@ -1,0 +1,940 @@
+:root {
+    /*defino la fuente general*/
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    /*definir variables!!!*/ 
+    --tamanio: 25px;
+    /*definir variables de colores */
+    --texto-blanco: #ffffff;
+    --texto-negro: black;
+    --color-primario: #3439b9;
+    --color-primario2: #d2f1fb;
+    --color-borde: #6475f7;
+    --fondo-negro: #0a0a0a;
+    --texto-gris-violeta: #8599a1;
+    --texto-azul-enlace: #5687fd;
+    /*gris*/
+    --gris: #808080;
+}
+
+* {
+    /* modelo de caja */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* google font 1 nav-nombre */
+.dancing-script-nav-name {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* google font 2 enlaces */
+.cinzel-enlaces {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* google font 3 seccion 1, h1  */
+.federico-seccion1 {
+    font-family: "Federico", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* animaciones keyframes CSS Unidad 2 */
+/* ANIMACIÓN DE CARRUSEL DE TEXTO Y CARRUSEL DE IMG */
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-200px * 4));
+        /* 200px * 4 <div class="carrusel-texto"> */
+        transform: translateX(calc(-200px * 4));
+    }
+}
+
+
+section {
+    margin-bottom: 100px;
+}
+
+/* *********************************************************************************** */
+/* 2) INICIO CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN  */
+/* las siguientes clases fueron incluidas en el código de bootstrap */
+header {
+    height: 80px;
+    width: 100%;
+    position: relative;
+}
+
+.nav-header {
+    background-color: var(--color-primario);
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 20px var(--color-borde),
+        /* difuminado interno */
+        0px 0px 20px var(--color-borde);
+    /* difuminado externo */
+    position: fixed !important;
+    /* mantiene la barra de menu, fija en la ventana */
+    opacity: 1 !important;
+    z-index: 999 !important;
+    /* z-index con un número alto para que se ubique por sobre los demás elementos */
+}
+
+.navbar-nav .enlaces {
+    /* la clase navbar-nav ya venia con el código bootstrap */
+    height: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    /* quita la decoracion a los enlaces de la class enlaces*/
+    color: var(--texto-blanco);
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 8px 8px 10px 8px;
+    /* espacio interno, se verá con el efecto hover */
+}
+
+li {
+    list-style-type: none;
+    /* quita los puntos de las listas */
+}
+
+
+/* efecto hover (cuando se pasa el cursor por encima)*/
+.enlaces:hover {
+    /* efecto hover en todo lo que tenga class enlaces */
+    background-color: var(--texto-negro);
+    box-shadow: 1px 1px 1px 1px var(--fondo-negro);
+    color: white;
+    border-radius: -5px;
+}
+
+.container-fluid {
+    /* esta clase venía en el código de bootstrap, por eso hay que obligar a que obedezca nuestro .css */
+    margin-top: 5px !important;
+    /* prioridad en el cumplimiento de órdenes */
+    width: 100% !important;
+    /* prioridad en el cumplimiento de órdenes */
+
+}
+
+.burguer-doble {
+    /* extensión que aparece en el responsive de bootstrap */
+    height: 100vh;
+    width: 50%;
+    margin-left: -20px !important;
+    padding-left: 30px !important;
+    background: var(--color-primario) !important;
+    display: block;
+    flex-direction: column;
+    /* posiciona en un eje vertical a los hijos */
+    justify-content: space-between;
+    text-align: left;
+    border: none !important;
+}
+
+.navbar-toggle {
+    /* esta clase venía en el código de bootstrap, por eso hay que obligar a que obedezca nuestro .css */
+    border: none !important;
+    /* prioridad en el cumplimiento de órdenes */
+    background-color: transparent !important;
+    /* prioridad en el cumplimiento de órdenes */
+}
+
+/* FIN 2) CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN */
+/* *********************************************************************************** */
+
+
+/* INICIO MAIN */
+/* *********************************************************************************** */
+/* 3) section 1 | carrusel texto */
+
+.seccion1-carrusel-texto {
+    width: 70%;
+    height: auto;
+    /* font-weight: bold;
+     negrita */
+    margin: 10px 15%;
+    overflow: hidden;
+    /* oculta lo que se encuentre fuera del div */
+    z-index: -2;
+    text-align: center;
+}
+
+.carrusel-animacion-texto {
+    padding-top: 7px;
+    /* contenedor de los 8 <div class="carrusel-texto"> */
+    display: flex;
+    /* hace flexibles los elementos */
+    animation: scroll 30s linear infinite;
+    /* scroll=nombre del Keyframe, 40s= tarda la animación, linear infinite=se reproduce infinitamente */
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 8);
+    /* 200px * 8 <div class="carrusel-texto"> */
+    z-index: -2;
+    /* para que tenga una ubicación por debajo de otros elementos */
+}
+
+.seccion1-carrusel-texto .carrusel-texto {
+    width: 200px;
+    /* ancho de <div class="carrusel-texto"> (de cada texto del carrusel) */
+}
+
+/* FIN 3) section 1 | carrusel texto */
+
+
+/*  INICIO 4) section 2 | contiene la imagen principal, un los h1(titulo), h2(subtitulos), a (enlaces a registrarse) */
+.seccion2-ofertas {
+    height: 500px;
+    width: 100%;
+
+    margin-top: -90px;
+    background-color: #5687fd;
+    background-image:
+        linear-gradient(to right top, #0000008a, #0000008a),
+        url(./img/WhatsApp\ Image\ 2024-04-22\ at\ 9.26.51\ PM.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--texto-blanco);
+}
+
+h1 {
+    padding-top: 90px;
+    /* margen interno superior */
+    font-size: 4rem !important;
+    /* por defecto 1rem=16px */
+}
+
+h2 {
+    padding: 5px 0 20px 0;
+    /* margen interno superior */
+    font-size: 2rem !important;
+    /* por defecto 1rem=16px */
+}
+
+.seccion2-btn-ver-mas {
+    text-decoration: none;
+    /* quita la decoracion al enlace */
+    background-color: var(--color-primario2);
+    color: var(--color-borde);
+    text-align: center;
+    padding: 15px;
+    /* margen interno */
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/*  FIN 4) section 2  */
+
+/* INICIO 5) section 3 | contiene al buscador, un los h2(titulo) y un form (buscador) */
+/*   Inicio Buscador  */
+.form-busqueda {
+    height: 100px;
+    width: 60%;
+    margin-left: 20%;
+    color: var(--texto-violeta);
+
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 20px;
+    margin-top: -90px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.busqueda>h2+form {
+    color: var(--color-borde);
+}
+
+/*   FIN  Buscador */
+/* FIN 5) section 3 */
+
+hr {
+    border: 5px solid var(--texto-azul-enlace);
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+/*   Inicio elemento fijo  */
+.elemento_fijo {
+    position: fixed;
+    bottom: 6vh;
+    right: 6vw;
+    border: 1px solid var(--violeta);
+    color: var(--violeta);
+}
+
+/*   FIN  Elemento fijo  */
+
+/* INICIO 6) section 4 | contiene la lista de categorías, un los h3(titulo)) y un div (contiene un div por producto, 6 en total y 3 productos por línea en ventana pc)*/
+/*   Inicio Catalogo de productos  */
+/* Medium devices (tablets, 768px and up) */
+.seccion4-Juegos {
+    text-align: center;
+}
+
+.col-sm-12 {
+    display: block;
+    flex-direction: column;
+    /* propiedad necesaria para posicionar en fila los hijos mas directos */
+    justify-content: space-between;
+    /* propiedad necesaria para posicionar en fila los hijos mas directos */
+
+}
+
+.col-sm-12 img {
+    transition: all .3s;
+    /* para la animación */
+    border-radius: 8px;
+    position: relative;
+}
+
+.catalogo-nombre-seleccion {
+    border-radius: 0 0 8px 8px;
+}
+
+.catalogo-nombre-seleccion h5 {
+    color: var(--texto-blanco) !important;
+    position: relative;
+    padding-top: 6px;
+    text-decoration: none;
+}
+
+.col-sm-12:hover img {
+    opacity: 0.8;
+    transform: scale(1.02);
+    /* efecto de agrandar la imagen al pasar el cursor */
+    /*  box-shadow: 0 0 20px var(--color-borde); difumina una sombra alrededor del color seleccionado */
+    box-shadow: inset 0px 0px 20px var(--color-borde),
+        /* difuminado interno */
+        0px 0px 20px var(--color-borde);
+    /* difuminado externo */
+    z-index: -2 !important;
+}
+
+.col-sm-12:hover .catalogo-nombre-seleccion {
+    transform: scale(1.02);
+    z-index: 999 !important;
+    text-decoration: none;
+}
+
+/* FIN 6) section 4  */
+
+/* INICIO 7) section 5 | contiene la lista de productos mas vendidos,   */
+.seccion5-carrusel-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /*  */
+    flex-direction: column;
+    /* los hijos mas directos se posicionarán en una columna */
+    overflow: hidden;
+    /* oculta lo que se encuentre fuera del div */
+    z-index: -2;
+    text-align: center;
+}
+
+.seccion5-carrusel-img h4,
+.seccion4-Juegos h4 {
+    font-size: 30px;
+    /* font-weight: bold; negrita */
+    color: var(--texto-negro) !important;
+    margin-top: 35px;
+    padding-bottom: 3px;
+    border-bottom: var(--color-borde) solid 2px;
+    margin-bottom: 50px;
+
+    line-height: 32px;
+    /* espacio entre líneas fijo en px */
+    display: inline-block;
+
+}
+
+.seccion5-carrusel-img a {
+    margin-left: 15px;
+    font-size: 16px;
+    color: var(--texto-azul-enlace);
+    font-weight: bold;
+}
+
+
+.animacion-img {
+    /* contenedor de los 8 <div class="carrusel-texto"> */
+    height: 300px;
+    width: calc(150px * 8);
+    /* 200px * 8 <div class="destacado"> */
+    display: flex;
+    /*flexible el tamaño del texto para se amolde al tamaño pantalla */
+    flex-direction: row;
+    justify-content: space-around;
+    /* distribuye el espacio entre y alrededor de los elementos de contenido a lo largo del eje principal de un contenedor flexible y el eje en línea de un contenedor de cuadrícula. */
+    /* hace flexibles los elementos */
+
+    animation: scroll 10s linear infinite;
+    /* scroll=nombre del Keyframe, 40s= tarda la animación, linear infinite=se reproduce infinitamente */
+    -webkit-animation: scroll 40s linear infinite;
+    z-index: -2;
+    /* para que tenga una ubicación por debajo de otros elementos */
+}
+
+.destacado {
+    margin: 15px 50px;
+    display: block;
+    /* propiedad necesaria parar ordenar en una columna a los hijos mas directos */
+    flex-direction: column;
+    /* los hijos mas directos se posicionarán en una columna */
+    justify-content: center;
+    align-items: center;
+}
+
+.destacado img {
+    height: 200px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+.precio-span {
+    margin-left: 15px;
+    font-size: 22px;
+    color: var(--texto-negro);
+}
+
+.cuotas-span {
+    margin-left: 15px;
+    font-size: 12px;
+    color: var(--texto-negro);
+}
+
+.precio {
+    display: block;
+    /* propiedad necesaria parar ordenar en una columna a los hijos mas directos */
+    flex-direction: column;
+    /* los hijos mas directos se posicionarán en una columna */
+    justify-content: center;
+    align-items: center;
+}
+
+/* FIN 7) section 5 */
+/* *********************************************************************************** */
+/* FN MAIN */
+
+
+/* ********************************************************************** */
+/*  8) footer | contiene a los visto en 3)  */
+/*   INICIO de footer  */
+
+footer {
+    width: 100%;
+    /* se modificará mientras se complete las demás secciones  */
+    margin-bottom: 0;
+    padding: 25px 0 30px 0;
+    background-color: var(--color-primario);
+    border: var(--color-borde) solid 5px;
+    /*  box-shadow: 0 0 20px var(--color-borde); difumina una sombra alrededor del color seleccionado */
+    box-shadow: inset 0px 0px 20px var(--color-borde),
+        /* difuminado interno */
+        0px 0px 20px var(--color-borde);
+    /* difuminado externo */
+}
+
+.footer-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    /*     */
+}
+
+.columna {
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.columna-redes {
+    height: 60px;
+    width: 80%;
+    display: flex;
+    /* propiedad necesaria para posicionar sobre un eje horizontal los hijos mas directos */
+    flex-direction: row;
+    /* posiciona en un eje horizontal a los hijos */
+    justify-content: space-between;
+}
+
+.columna-mapa {
+    height: 140px;
+    width: 100%;
+    background-image: url(img/mapa-obelo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    /* centra la img del mapa */
+}
+
+footer .fenlaces {
+    color: var(--texto-blanco) !important;
+    /* esta orden, me parece que estaba tapada por el código bootstrap, asique le puse un !important */
+    line-height: 32px;
+    /* espacio entre líneas fijo en px */
+    text-decoration: none;
+    /* quita la decoracion a los enlaces */
+    opacity: 0.5;
+}
+
+h3 {
+    font-size: 20px !important;
+    color: var(--texto-blanco) !important;
+    /* esta orden, me parece que estaba tapada por el código bootstrap, asique le puse un !important */
+    padding-bottom: 3px;
+    border-bottom: var(--color-borde) solid 2px;
+    line-height: 32px;
+    /* espacio entre líneas fijo en px */
+    display: inline-block;
+}
+
+
+.footer-enlaces .fenlaces:hover {
+    opacity: 1;
+    font-weight: bold;
+    /* negrita */
+    text-decoration: none;
+
+}
+
+#footer-enlaces-1 {
+    height: 220px;
+    margin-top: 58px !important;
+}
+
+
+/*  ********************************************************************** */
+/*  FIN de footer  */
+
+
+
+
+
+/* *********************************************************************************** */
+/* MEDIAS QUERYS */
+/* Media query para teléfonos móviles SM XS */
+@media only screen and (max-width: 767px) {
+
+    /* 2) INICIO CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN  */
+    .collapse {
+        width: 80%;
+        /* esto aqui solo achica da este ancho en dispositivos pequeños*/
+    }
+
+    .navbar-nav .enlaces {
+        font-size: 16px;
+        /* enlaces del menu extendible */
+    }
+
+    /*  INICIO 4) section 2 | contiene la imagen principal, un los h1(titulo), h2(subtitulos), a (enlaces a registrarse) */
+    .seccion2-ofertas {
+        height: 300px;
+        width: 100%;
+
+        margin-top: -90px;
+        background-image:
+            linear-gradient(to right top, #0000008a, #0000008a),
+            url(./img/WhatsApp\ Image\ 2024-04-22\ at\ 9.26.51\ PM.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--texto-blanco);
+    }
+
+    h1 {
+        padding-top: 60px;
+        /* margen interno superior */
+        font-size: 2.2rem !important;
+        /* por defecto 1rem=16px */
+    }
+
+    h2 {
+        padding: 0 0 20px 0;
+        /* margen interno superior */
+        font-size: 1rem !important;
+        /* por defecto 1rem=16px */
+    }
+
+
+
+
+    /*  6) section 4 | contiene la lista de Juegos */
+    .seccion4-Juegos-3 {
+        height: 750px;
+        /* 250px por img*/
+        width: 100%;
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .col-sm-12 img {
+        height: 220px;
+        width: 60%;
+        transition: all .3s;
+        /* para la animación */
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .catalogo-nombre-seleccion {
+        border-radius: 0 0 8px 8px;
+        margin-top: -10px;
+    }
+
+    .catalogo-nombre-seleccion h5 {
+        font-size: 18px;
+        color: var(--texto-negro) !important;
+        position: relative;
+        text-decoration: none;
+    }
+
+
+    /* INICIO 7) section 5 | contiene la lista de productos mas vendidos,   */
+    .seccion5-carrusel-img {
+        height: 350px;
+        width: 100%;
+
+        display: block;
+        /*  */
+        flex-direction: column;
+        /* los hijos mas directos se posicionarán en una columna */
+        overflow: hidden;
+        /* oculta lo que se encuentre fuera del div */
+        z-index: -2;
+        text-align: center;
+    }
+
+    .seccion4-Juegos h4 {
+        width: 100%;
+    }
+
+    .seccion5-titulos-enlace {
+        height: 120px;
+        width: 80%;
+        margin-left: 10%;
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .seccion5-carrusel-img h4,
+    .seccion4-Juegos h4 {
+        font-size: 20px;
+        /* font-weight: bold; negrita */
+        color: var(--texto-negro) !important;
+        margin-top: 35px;
+        padding-bottom: 3px;
+        border-bottom: var(--color-borde) solid 2px;
+        margin-bottom: 5px;
+
+        line-height: 32px;
+        /* espacio entre líneas fijo en px */
+        display: inline-block;
+
+    }
+
+    .seccion5-carrusel-img a {
+        width: 100%;
+        margin-left: 10%;
+        margin-bottom: 15px;
+        font-size: 11px;
+        color: var(--texto-azul-enlace);
+        font-weight: bold;
+    }
+
+
+    .animacion-img {
+        /* contenedor de los 8 <div class="carrusel-texto"> */
+        height: 120px;
+        width: calc(120px * 8);
+        /* 200px * 8 <div class="destacado"> */
+        display: flex;
+        /*flexible el tamaño del texto para se amolde al tamaño pantalla */
+        flex-direction: row;
+        justify-content: space-around;
+        /* distribuye el espacio entre y alrededor de los elementos de contenido a lo largo del eje principal de un contenedor flexible y el eje en línea de un contenedor de cuadrícula. */
+        /* hace flexibles los elementos */
+
+        animation: scroll 10s linear infinite;
+        /* scroll=nombre del Keyframe, 40s= tarda la animación, linear infinite=se reproduce infinitamente */
+        -webkit-animation: scroll 40s linear infinite;
+        z-index: -2;
+        /* para que tenga una ubicación por debajo de otros elementos */
+    }
+
+    .destacado {
+        height: 120px;
+        margin: 10px 30px;
+        display: block;
+        /* propiedad necesaria parar ordenar en una columna a los hijos mas directos */
+        flex-direction: column;
+        /* los hijos mas directos se posicionarán en una columna */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .destacado img {
+        height: 120px;
+        width: 120px;
+        border-radius: 10px;
+    }
+
+    .precio-span {
+        margin-left: 10px;
+        font-size: 15px;
+        color: var(--texto-negro);
+    }
+
+    .cuotas-span {
+        margin-left: 10px;
+        font-size: 10px;
+        color: var(--texto-negro);
+    }
+
+    .precio {
+        display: block;
+        /* propiedad necesaria parar ordenar en una columna a los hijos mas directos */
+        flex-direction: column;
+        /* los hijos mas directos se posicionarán en una columna */
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* RESPONSIVE escritorio: FOOTER */
+    /* 8) footer  */
+    /* calculo posición del footer
+header px
+seccion1-carrusel-texto px
+seccion2-ofertas px
+seccion3 buscador px
+hr --
+seccion4 Juegos px
+hr --
+seccion5 mas vendidos px
+----------------------------
+aprox 
+*/
+    footer {
+        margin-top: 10px;
+    }
+
+    .footer-columnas {
+        display: block;
+        /* propiedad necesaria para posicionar sobre un eje horizontal los hijos mas directos */
+        flex-direction: column;
+        /* posiciona en un eje horizontal a los hijos */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .columna {
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .columna-redes {
+        margin: 10% 0 0 10%;
+    }
+
+    .columna-mapa {
+        margin: 15px 0 0 18%;
+    }
+}
+
+/* Media query para tabletas MD */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /*  6) section 4 | contiene la lista de Juegos */
+    .seccion4-catalogo-3 {
+        height: 410px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /* propiedad necesaria para posicionar en fila los hijos mas directos */
+        justify-content: space-between;
+        /* propiedad necesaria para posicionar en fila los hijos mas directos */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .col-sm-12 {
+        height: 410px;
+        width: 20%;
+    }
+
+    .col-sm-12 img {
+        height: 410px;
+        width: 100%;
+
+    }
+
+    .catalogo-nombre-seleccion {
+        background-color: black;
+        height: 50px;
+        width: 100%;
+        padding-bottom: 3px;
+        margin-top: -60px;
+    }
+
+    .catalogo-nombre-seleccion h5 {
+        font-size: 30px;
+        text-decoration: none;
+    }
+    
+    /* INICIO 7) section 5 | contiene la lista de productos mas vendidos,   */
+    .seccion5-titulos-enlace {
+        height: 180px;
+        width: 40%;
+        margin-left: 30%;
+        display: block;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    
+    /* RESPONSIVE escritorio: FOOTER */
+    /* 8) footer  */
+    /* calculo posición del footer
+header 80px
+seccion1-carrusel-texto 100px
+seccion2-ofertas 500px
+seccion3 buscador 100px
+hr --
+seccion4 Juegos 450px
+hr --
+seccion5 mas vendidos 300px
+----------------------------
+aprox 1530-1630
+*/
+    footer {
+        margin-top: 10px;
+    }
+
+
+    .columna {
+        width: 20%;
+    }
+
+    .columna-redes {
+        margin: 10% 0 0 0;
+    }
+
+    .columna-mapa {
+        margin: 15px 0 0 0;
+    }
+}
+
+/* Media query para dispositivos de escritorio LG */
+@media only screen and (min-width: 1024px) {
+    .col-sm-12:hover .catalogo-nombre-seleccion {
+        margin-top: -57px;
+    }
+
+    /*  6) section 4 | contiene la lista de Juegos */
+    .seccion4-catalogo-3 {
+        height: 410px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /* propiedad necesaria para posicionar en fila los hijos mas directos */
+        justify-content: space-between;
+        /* propiedad necesaria para posicionar en fila los hijos mas directos */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .col-sm-12 {
+        height: 410px;
+        width: 20%;
+    }
+
+    .col-sm-12 img {
+        height: 410px;
+        width: 100%;
+
+    }
+
+    .catalogo-nombre-seleccion {
+        background-color: black;
+        height: 50px;
+        width: 100%;
+        padding-bottom: 3px;
+        margin-top: -60px;
+    }
+
+    .catalogo-nombre-seleccion h5 {
+        font-size: 30px;
+        text-decoration: none;
+    }
+
+    /* RESPONSIVE escritorio: FOOTER */
+    /* 8) footer  */
+    /* calculo posición del footer
+header 80px
+seccion1-carrusel-texto 100px
+seccion2-ofertas 500px
+seccion3 buscador 100px
+hr --
+seccion4 Juegos 450px
+hr --
+seccion5 mas vendidos 300px
+----------------------------
+aprox 1530-1630
+*/
+    footer {
+        margin-top: -10px;
+    }
+
+    .columna {
+        width: 20%;
+    }
+
+    .columna-redes {
+        margin: 10% 0 0 0;
+    }
+
+    .columna-mapa {
+        margin: 15px 0 0 0;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleRegistro.css">
+    <link rel="stylesheet" href="./estilos-index.css">
+    <link rel="stylesheet" href="./css/styleValidacion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>Formulario</title>
+    
+    <!--  Llamar a marco bootstrap, para barra de navegación responsive -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--importar las fuente google font -->
+    <!-- google font 1 nav-nombre -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- google font 2 enlaces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <!-- google font 3 seccion 1, h1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Federico:wght@100..700&display=swap" rel="stylesheet">
+    <!-- aca podemos poner un icono-->
+</head>
+<body>
+    <header>
+        <!-- ********************************************************************** -->
+        <!-- 2) INICIO CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN  -->
+        <nav class="navbar navbar-inverse nav-header" style="background-color: #4640e4; border: #8d73ff solid 5px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <!--  las tres rayitas del burguer  -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand dancing-script-nav-name" style="font-size: 42px; margin: 5px; color: white;"
+                        href="./index.html">End Gammers</a>
+                    <a href=""><i class="fa-solid fa-web-awesome fa-xl" style="color: white;"></i></a>
+
+                </div> 
+                <!--  inicio modo responsive (burguer)  -->
+                <div class="collapse navbar-collapse burguer-doble" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right cinzel-enlaces">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href="index.html" class="enlaces cinzel-enlaces" style="color: white;">Home</a></li>
+                        <li><a href=" " class="enlaces cinzel-enlaces" style="color: white;">Juegos</a></li>
+                        <li><a href=" " class="enlaces cinzel-enlaces" style="color: white;">+Vendidos</a></li>
+                        <li><a href="indexLogin.html" class="enlaces cinzel-enlaces" style="color: white;">Iniciar sesión</a></li>
+                    </ul>
+                </div>
+                <!--  fin modo responsive (burguer)  -->
+            </div>
+        </nav>
+        <!--  FIN CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN  -->
+        <!-- ********************************************************************** -->
+    </header>
+    <main>
+        <section class="form sign-up-container">
+            <form class="formulario">
+                <h1 class="" style="font-size: 5px; margin: 5px; color: rgba(255, 255, 255, 0.986); "> CREANDO TU CUENTA </h1>
+                <label for="Nombre">Nombre:</label>
+                <input type="text" placeholder="Ingrese Nombre" name="nombre" id="name">
+                <label for="Apellido">Apellido:</label>
+                <input type="text" placeholder="Ingrese su Apellido"name="nombre" id="name">
+                <label for="email">Correo Electronico:</label>
+                <input type="email" placeholder="Email" name="email" id="email">
+                <label for="Contraseña">Contraseña:</label>
+                <input type="password" placeholder="Contraseña" name="password" id="password">
+                <p class="acuerdo">Estoy de acuerdo con terminos y condiciones</p>
+                <button>Registrarse</button>
+                <p class="link"><a href="indexLogin.html">¿Ya tenes cuenta?</a></p>
+                </form>
+        </section>
+        
+        <p class="notify check_notify">¡TE REGISTRASTE CORRECTAMENTE</p>
+        <p class="notify error_notify">¡UPPs! ocurrio un error, por favor verifica tus datos</p>
+        <script src="./js/script.js"></script>  
+        <script src="./js/Api.js"></script>  
+
+    </main> 
+    
+    </body>
+</html>

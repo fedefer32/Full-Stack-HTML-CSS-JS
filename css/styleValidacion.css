@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: #3939d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+.sign-in-container {
+    display: none;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.form input {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin: auto;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.form input[type="text"].error {
+    border: solid thin rgb(238, 255, 0);
+}
+
+.form input[type="email"].error {
+    border: solid thin rgb(221, 255, 0);
+}
+
+.form input[type="password"].error {
+    border: solid thin rgb(221, 255, 0);
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    padding: .5rem;
+    cursor: pointer;
+    background-color: rgb(32, 69, 181);
+    border: none;
+    color: #fff;
+}
+
+.form a {
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+    width: 150px;
+    font-size: .7rem;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.notify {
+    width: 50%;
+    position: absolute;
+    top: 1;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    display: none;
+}
+
+.check_notify {
+    background-color: rgb(202, 144, 9);
+}
+
+.check_notify.active {
+    display: block;
+}
+
+.error_notify {
+    background-color: rgb(246, 255, 0);
+}
+
+.error_notify.active {
+    display: block;
+}

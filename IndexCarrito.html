@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- ESTRUCTURA BÁSICA -->
+<!-- 1) head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Isla de la Moda</title>
+
+    <!--  Llamar al archivo style.css -->
+    <link rel="stylesheet" href="estilos-index.css">
+    <link rel="stylesheet" href="styleCarrito.css">
+
+    <!--  Llamar a marco bootstrap, para barra de navegación responsive -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <!--importar las fuente google font -->
+    <!-- google font 1 nav-nombre -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- google font 2 enlaces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <!-- google font 3 seccion 1, h1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Federico:wght@100..700&display=swap" rel="stylesheet">
+    <!-- aca podemos poner un icono-->
+
+</head>
+
+<!-- body | contiene al header, main, section -->
+
+<body>
+    <!-- Especificidad
+    inline > id > clase > tipo
+    !important
+    -->
+    <header>
+        <!-- ********************************************************************** -->
+        <!-- 2) INICIO CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN  -->
+        <nav class="navbar navbar-inverse nav-header" style="background-color: #7637eb; border: #c8f16f solid 5px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <!--  las tres rayitas del burguer  -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand dancing-script-nav-name" style="font-size: 42px; margin: 5px; color: white;"
+                        href="index.html">End Gammers</a>
+                    <a href=""><i class="fa-solid fa-web-awesome fa-xl" style="color: white;"></i></a>
+
+                </div> 
+                <!--  inicio modo responsive (burguer)  -->
+                <div class="collapse navbar-collapse burguer-doble" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right cinzel-enlaces">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href="index.html" class="enlaces cinzel-enlaces" style="color: white;">Home</a></li>
+                        <li><a href="IndexCarrito.html" class="enlaces cinzel-enlaces" style="color: white;">Juegos</a></li>
+                        <li><a href=" " class="enlaces cinzel-enlaces" style="color: white;">+Vendidos</a></li>
+                        <li><a href="indexLogin.html" class="enlaces cinzel-enlaces" style="color: white;">Iniciar sesión</a></li>
+                    </ul>
+                </div>
+                <!--  fin modo responsive (burguer)  -->
+            </div>
+        </nav>
+        <!--  FIN CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN  -->
+        <!-- ********************************************************************** -->
+    </header>
+
+
+    <!-- main | contiene a las 8 secciones -->
+    <main>
+        <!-- 3) section 1 | contiene carrusel de descuentos y promociones (sin imagenes?)-->
+        <section>
+            <div class="seccion1-carrusel-texto">
+                <div class="carrusel-animacion-texto">
+                    <div class="carrusel-texto">
+                        <p>Promociones</p>
+                    </div>
+                    <div class="carrusel-texto">
+                        <p>6 cuotas sin interés</p>
+                    </div>
+
+                    <div class="carrusel-texto">
+                        <p>Envios gratis!</p>
+                    </div>
+                    <div class="carrusel-texto">
+                        <p>Canje de Juegos</p>
+                    </div>
+
+                    <div class="carrusel-texto">
+                        <p>Promociones</p>
+                    </div>
+                    <div class="carrusel-texto">
+                        <p>6 cuotas sin interés</p>
+                    </div>
+
+                    <div class="carrusel-texto">
+                        <p>Envios gratis!</p>
+                    </div>
+                    <div class="carrusel-texto">
+                        <p>Canje de Juegos</p>
+                    </div>
+                </div>
+            </div>
+        </section>  
+
+    <section class="container"> 
+        <div class="seccion4-titulo-Juegos">
+            <h1 class=" cinzel-enlaces" style="color: #0b0b0b;">Clientes frecuentes</h1>
+        </div>
+        <div class=" destacados cinzel-enlaces" id="content " style="font-size: 20px; margin: 5px; color: rgb(9, 9, 9);">        
+            <h2 class=" cinzel-enlaces" style="font-size: 40px; margin: 5px; color: rgb(9, 9, 9);"> 
+                Posición - Nombre - Email  - Telefono - Usuario  </h2>
+            <div id="data-container"></div>
+        </div>  
+    </section>   
+    <section class="container">
+        <div class="seccion4-titulo-Juegos">
+            <h2 class=" cinzel-enlaces" style="font-size: 40px; margin: 10px; color: rgb(9, 9, 9);">
+                Sorteo para los Clientes</h2>
+        </div>
+        <div class="image-container">
+            <img src="images/products/ratched.png" alt="Descripción de la imagen">
+            <div class="description">
+                <h3 class=" cinzel-enlaces">Todo tipo de juegos</h3>
+                <p class=" cinzel-enlaces">Juegos de plataformas.</p>
+            </div>
+        </div>
+
+    </section>
+      
+    
+</main>
+
+    <!-- ********************************************************************** -->
+    <!-- 8) footer | contiene a los visto en 3) -->
+    <!--  INICIO DE FOOTER  -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-columnas">
+                <div class="footer-columna-1 columna">
+                    <div class="navbar-header">
+                        <!--  aca puse <div class="navbar-header">, la misma clase que vino con el código de bootstrap, para que en el menu, para que cumpla la misma función -->
+                        <a class="navbar-brand dancing-script-nav-name" style="font-size: 42px; color: white;"
+                            href="#">End Gammers</a>
+                        <a href=""><i class="fa-solid fa-heart fa-flip fa-xl" style="color: white; "></i></a>
+                    </div>
+
+                    <ul class="footer-enlaces" id="footer-enlaces-1">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href="index.html" class="fenlaces cinzel-enlaces enlace-servicios">Home</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Juegos</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Mas vendidos</a></li>
+                        <li><a href="indexRegistro.html" class="fenlaces cinzel-enlaces">Registrarse</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Beneficios End Gammers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-columna-2 columna">
+                    <h3 class="cinzel-enlaces">Ayuda</h3>
+                    <ul class="footer-enlaces" id="footer-enlaces-2">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href=" " class="fenlaces cinzel-enlaces">¿Cómo comprar?</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Fisico o Digital</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Como hacer los Canjes</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Medios de pagos habilitados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-columna-3 columna">
+                    <h3 class="cinzel-enlaces">Contacto</h3>
+                    <ul class="footer-enlaces" id="footer-enlaces-3">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Teléfono: xx-xxxx-xx</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">xxxxx@gmail.com</a></li>
+                    </ul>
+                    <div class="footer-columna-3 columna-redes">
+                        <!-- Código https://fontawesome.com para iconos de redes sociales -->
+                        <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #7f59f3;"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #5e7be2;"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp fa-xl" style="color: #e6c763;"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin fa-xl" style="color: #bb3ddb;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-columna-4 columna ">
+                    <h3 class="cinzel-enlaces">Ubicación</h3>
+                        <ul class="footer-enlaces" id="footer-enlaces-4">
+                            <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                            <li><a href=" " class="fenlaces cinzel-enlaces">Calle: xxxxxx</a></li>
+                        </ul>
+                        <div class="footer-columna-4 columna-mapa">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  FIN DE FOOTER  -->
+        <!-- ********************************************************************** -->
+
+        <!-- 9) script |  -->
+        <!-- Código https://fontawesome.com para iconos de redes sociales en el footer -->
+        <script src="./js/ApiCarrito.js" ></script>
+        <script src="./js/Api.js"></script>
+        <script src="https://kit.fontawesome.com/2ebc501450.js" crossorigin="anonymous"></script>  
+        
+</body>
+</html>

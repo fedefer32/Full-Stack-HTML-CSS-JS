@@ -1,2 +1,2 @@
 # Full-Stack-HTML-CSS-JS
-Curso Fullstack
+Curso de Full Stack

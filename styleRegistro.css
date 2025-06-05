@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin-top: 15%;
+    box-sizing: border-box;
+   
+}
+body {
+   
+    background: #ffffff; /* Fondo blanco */
+    background: -webkit-linear-gradient(to right, #ffffff, #d1d1d1); /* Degradado incluyendo blanco */
+    background: linear-gradient(to right, #ffffff, #d1d1d1);
+    font-family: 'Roboto', sans-serif;
+    background-image: url('img/fondo.png');
+}
+form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding: 30px;
+    background-color: black;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 30%;
+}
+h1{
+    position: relative;
+   
+    margin-bottom: 15px;
+    padding-bottom: 7px;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 120px;
+    left: 0;
+    bottom: 0;    
+}
+input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 5px 6px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    border-radius: 1px;
+}
+
+.acuerdo{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+button{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height:40px ;
+    background-color: #5d5b5b96;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+}
+.link{
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+

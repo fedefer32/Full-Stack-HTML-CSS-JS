@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- ESTRUCTURA BÁSICA -->
+<!-- 1) head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Isla de los Juegos</title>
+
+    <!--  Llamar al archivo style.css -->
+    <link rel="stylesheet" href="estilos-index.css">
+
+    <!--  Llamar a marco bootstrap, para barra de navegación responsive -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <!--importar las fuente google font -->
+    <!-- google font 1 nav-nombre -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- google font 2 enlaces -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <!-- google font 3 seccion 1, h1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Federico:wght@100..700&display=swap" rel="stylesheet">
+    <!-- aca podemos poner un icono-->
+
+</head>
+
+<!-- body | contiene al header, main, section -->
+
+<body>
+    <!-- Especificidad
+    inline > id > clase > tipo
+    !important
+    -->
+    <header>
+        <!-- ********************************************************************** -->
+        <!-- 2) INICIO CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN  -->
+        <nav class="navbar navbar-inverse nav-header" style="background-color: #2c0e4a; border: #6498d3 solid 5px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <!--  las tres rayitas del burguer  -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand dancing-script-nav-name" style="font-size: 42px; margin: 5px; color: white;"
+                        href="#">End Gammers</a>
+                    <a href=""><i class="fa-brands fa-web-awesome fa-xl" style="color: white;"></i></a>
+
+                </div> 
+                <!--  inicio modo responsive (burguer)  -->
+                <div class="collapse navbar-collapse burguer-doble" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right cinzel-enlaces">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href="index.html" class="enlaces cinzel-enlaces" style="color: white;">Home</a></li>
+                        <li><a href="IndexCarrito.html" class="enlaces cinzel-enlaces" style="color: white;">Consultar Api</a></li>
+                        <li><a href=" " class="enlaces cinzel-enlaces" style="color: white;">+Vendidos</a></li>
+                        <li><a href="indexLogin.html" class="enlaces cinzel-enlaces" style="color: white;">Iniciar sesión</a></li>
+                    </ul>
+                </div>
+                <!--  fin modo responsive (burguer)  -->
+            </div>
+        </nav>
+        <!--  FIN CÓDIGO BOOTSTRAP BARRA DE NAVEGACIÓN  -->
+        <!-- ********************************************************************** -->
+    </header>
+
+
+    <!-- main | contiene a las 8 secciones -->
+    <main>
+        <!-- 3) section 1 | contiene carrusel de descuentos y promociones (sin imagenes?)-->
+        <section>
+            <div class="seccion1-carrusel-texto">
+                <div class="carrusel-animacion-texto">
+                    <div class="carrusel-texto">
+                        <p>Promociones</p>
+                    </div>
+                    <div class="carrusel-texto">
+                        <p>6 cuotas sin interés</p>
+                    </div>
+
+                    <div class="carrusel-texto">
+                        <p>Envios gratis!</p>
+                    </div>
+                    <div class="carrusel-texto">
+                        <p>Canje de Juegos</p>
+                    </div>
+
+                    <div class="carrusel-texto">
+                        <p>Promociones</p>
+                    </div>
+                    <div class="carrusel-texto">
+                        <p>6 cuotas sin interés</p>
+                    </div>
+
+                    <div class="carrusel-texto">
+                        <p>Envios gratis!</p>
+                    </div>
+                    <div class="carrusel-texto">
+                        <p>Canje de Juegos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 4) section 2 | contiene la imagen principal, un los h1(titulo), h2(subtitulos), a (enlaces a registrarse)-->
+        <section class="seccion2-ofertas">
+            <h1 class="seccion2-titulo-ofertas federico-seccion1">Semana Promociones! <br>15% y 25% en decuentos</h1>
+            <h2 class="seccion2-subtitulo-ofertas federico-seccion2">y hasta 6 cuotas sin interés.</h2>
+            <a class="seccion2-btn-ver-mas" href="indexRegistro.html">Registrarse</a>
+        </section>
+        <!-- 5) section 3 | contiene al buscador, un los h2(titulo) y un form (buscador)-->
+        <section class=" form-busqueda ">
+            <h4 class="cinzel-enlaces">¿Qué juego buscas?</h4>
+            <form action=" ">
+                <input type="text" class="form-control" placeholder="Buscar...">
+                <button type="button" class="btn ">Buscar</button>
+            </form>
+
+
+        </section>
+        <hr><!-- entre las secciones una línea separadora-->
+        <!-- 6) section 4 | contiene la lista de categorías, un los h3(titulo)) y un div (contiene un div por producto, 6 en total y 3 productos por línea en ventana pc)-->
+        <section class="seccion4-Juegos" id="seccion4-Juegos">
+
+            <h4 class="seccion4-titulo-Juegos cinzel-enlaces" style="color: #3d77db;" href="IndexCarrito.html" >Juegos</h4>
+
+            <div class="container-fluid seccion4-catalogo-3">
+                <div class="col-sm-12 federico-seccion2">
+
+                    <a class="catalogo_a " href="">
+                        <img class="catalogo_imagen" src="./img/infantiles.png">
+                        <div class="catalogo-nombre-seleccion">
+                            <h5 class="cinzel-enlaces">Infantiles</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12  federico-seccion2">
+                    <a class="catalogo_a" href="">
+                        <img class="catalogo_imagen" src="./img/Aventuras.png">
+                        <div class="catalogo-nombre-seleccion">
+                            <h5 class="cinzel-enlaces">Aventuras</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12 federico-seccion2">
+                    <a class="catalogo_a" href="">
+                        <img class="catalogo_imagen" src="./img/deportes.png">
+                        <div class="catalogo-nombre-seleccion">
+                            <h5 class="cinzel-enlaces">Deportes</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="container-fluid seccion4-catalogo-3">
+                <div class="col-sm-12  federico-seccion2">
+                    <a class="catalogo_a" href="">
+                        <img class="catalogo_imagen" src="./img/accion.png">
+                        <div class="catalogo-nombre-seleccion">
+                            <h5 class="cinzel-enlaces">Accion</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12  federico-seccion2">
+                    <a class="catalogo_a" href="">
+                        <img class="catalogo_imagen" src="./img/survival.png">
+                        <div class="catalogo-nombre-seleccion">
+                            <h5 class="cinzel-enlaces">Survival</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12 federico-seccion2">
+                    <a class="catalogo_a " href="">
+                        <img class="catalogo_imagen" src="./img/Carreras.png">
+                        <div class="catalogo-nombre-seleccion">
+                            <h5 class="cinzel-enlaces">Autos/Carreras</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr><!-- entre las secciones una línea separadora-->
+        <!-- 7) section 5 | contiene la lista de Juegos mas vendidos -->
+        <section class="seccion5-carrusel-img">
+            <div class="seccion5-titulos-enlace">
+                <h4 class="seccion5-titulo-destacados cinzel-enlaces">Juegos mas vendidos</h4>
+                <a href="">Mostrar ranking...</a>
+            </div>
+            <div class="animacion-img"> <!--Aquí se cargarán los juegos mas destacados -->
+                <div class="destacado federico-seccion2"><img src="./images/products/gow.png" alt="">
+                    <a href="">God of War</a>
+                    <div class="precio">
+                        <span class="precio-span">$ 105.000,00</span>
+                    </div>
+                    <span class="cuotas-span">en 6 cuotas de...</span>
+                </div>
+                <div class="destacado federico-seccion2"><img src="./images/products/Assasin.png" alt="">
+                    <a href="">Assasin Creed</a>
+                    <div class="precio">
+                        <span class="precio-span">$ 98.000,00</span>
+                    </div>
+                    <span class="cuotas-span">en 6 cuotas de...</span>
+                </div>
+                <div class="destacado federico-seccion2"><img src="./images/products/futbol.png" alt="">
+                    <a href="">FC2025</a>
+                    <div class="precio">
+                        <span class="precio-span">$ 116.000,00</span>
+                    </div>
+                    <span class="cuotas-span">en 6 cuotas de...</span>
+                </div>
+                <div class="destacado federico-seccion2"><img src="./images/products/horizon.png" alt="">
+                    <a href="">Horizon F. West</a>
+                    <div class="precio">
+                        <span class="precio-span">$ 97.000,00</span>
+                    </div>
+                    <span class="cuotas-span">en 6 cuotas de...</span>
+                </div>
+                <div class="destacado federico-seccion2"><img src="./images/products/carrera1.png" alt="">
+                    <a href="">Gran Turismo</a>
+                    <div class="precio">
+                        <span class="precio-span">$ 89.000,00</span>
+                    </div>
+                    <span class="cuotas-span">en 6 cuotas de...</span>
+                </div>
+                <div class="destacado federico-seccion2"><img src="./images/products/minecraft.png" alt="">
+                    <a href="">Minecraft</a>
+                    <div class="precio">
+                        <span class="precio-span">$ 75.000,00</span>
+                    </div>
+                    <span class="cuotas-span">en 6 cuotas de...</span>
+                </div>
+                <div class="destacado federico-seccion2"><img src="./images/products/TLOU.png" alt="">
+                    <a href="">The Last of us</a>
+                    <div class="precio">
+                        <span class="precio-span">$ 67.000,00</span>
+                    </div>
+                    <span class="cuotas-span">en 6 cuotas de...</span>
+                </div>
+                <div class="destacado federico-seccion2"><img src="./images/products/street.png" alt="">
+                    <a href="">Street Fighter</a>
+                    <div class="precio">
+                        <span class="precio-span">$ 47.000,00</span>
+                    </div>
+                    <span class="cuotas-span">en 6 cuotas de...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7.1) section 8.1 | Flecha direccional al Home, -->
+        <a class="elemento_fijo" href="#">
+            <i class="fa fa-circle-up"></i>
+        </a>
+    </main>
+
+
+
+
+
+    <!-- ********************************************************************** -->
+    <!-- 8) footer | contiene a los visto en 3) -->
+    <!--  INICIO DE FOOTER  -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-columnas">
+                <div class="footer-columna-1 columna">
+                    <div class="navbar-header">
+                        <!--  aca puse <div class="navbar-header">, la misma clase que vino con el código de bootstrap, para que en el menu, para que cumpla la misma función -->
+                        <a class="navbar-brand dancing-script-nav-name" style="font-size: 42px; color: white;"
+                            href="#">End Gammers</a>
+                        <a href=""><i class="fa-brands fa-web-awesome fa-xl" style="color: white; "></i></a>
+                    </div>
+
+                    <ul class="footer-enlaces" id="footer-enlaces-1">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href="index.html" class="fenlaces cinzel-enlaces enlace-servicios">Home</a></li>
+                        <li><a href="IndexCarrito.html" class="fenlaces cinzel-enlaces">Juegos</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Mas vendidos</a></li>
+                        <li><a href="indexRegistro.html" class="fenlaces cinzel-enlaces">Registrarse</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Beneficios End Gammers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-columna-2 columna">
+                    <h3 class="cinzel-enlaces">Ayuda</h3>
+                    <ul class="footer-enlaces" id="footer-enlaces-2">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href=" " class="fenlaces cinzel-enlaces">¿Cómo comprar?</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Fisico o Digital</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Como hacer los canjes</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Medios de pagos habilitados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-columna-3 columna">
+                    <h3 class="cinzel-enlaces">Contacto</h3>
+                    <ul class="footer-enlaces" id="footer-enlaces-3">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Teléfono: xx-xxxx-xx</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">xxxxx@gmail.com</a></li>
+                    </ul>
+                    <div class="footer-columna-3 columna-redes">
+                        <!-- Código https://fontawesome.com para iconos de redes sociales -->
+                        <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #eb4bdd;"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #476bea;"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp fa-xl" style="color: #63e688;"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin fa-xl" style="color: #52c1ea;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-columna-4 columna ">
+                    <h3 class="cinzel-enlaces">Ubicación</h3>
+                        <ul class="footer-enlaces" id="footer-enlaces-4">
+                            <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                            <li><a href=" " class="fenlaces cinzel-enlaces">Calle: xxxxxx</a></li>
+                        </ul>
+                        <div class="footer-columna-4 columna-mapa">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  FIN DE FOOTER  -->
+        <!-- ********************************************************************** -->
+
+        <!-- 9) script |  -->
+        <!-- Código https://fontawesome.com para iconos de redes sociales en el footer -->
+        <script src="https://kit.fontawesome.com/2ebc501450.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
