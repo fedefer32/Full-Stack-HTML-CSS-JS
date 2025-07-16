@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- ESTRUCTURA BÁSICA -->
+<!-- 1) head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito de compras</title>
+
+     <!--  Llamar al archivo styleCart.css -->
+    <link rel="stylesheet" href="estilos-index.css">
+    <link rel="stylesheet" href="styleCart.css">
+
+    <!--importar las fuente google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<!-- body | contiene al header, main, section -->
+
+<body>
+    <!-- Especificidad
+    inline > id > clase > tipo 
+    !important
+    -->
+    
+  <header>
+      
+    <h2>Carrito</h2>
+    <button id="openCart">Ver Carrito</button>
+      
+    </header>
+
+  <main>
+    <section id="products"></section>
+
+    
+    <!-- ********************************************************************** -->
+    <!-- 8) footer | contiene a los visto en 3) -->
+    <!--  INICIO DE FOOTER  -->
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-columnas">
+                <div class="footer-columna-1 columna">
+                    <div class="navbar-header">
+                        <!--  aca puse <div class="navbar-header">, la misma clase que vino con el código de bootstrap, para que en el menu, para que cumpla la misma función -->
+                        <a class="navbar-brand dancing-script-nav-name" style="font-size: 42px; color: white;"
+                            href="#">End Gammers</a>
+                        <a href=""><i class="fa-solid fa-web-awesome fa-xl" style="color: white; "></i></a>
+                    </div>
+
+                    <ul class="footer-enlaces" id="footer-enlaces-1">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href="index.html" class="fenlaces cinzel-enlaces enlace-servicios">Home</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Juegos</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Mas vendidos</a></li>
+                        <li><a href="indexRegistro.html" class="fenlaces cinzel-enlaces">Registrarse</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Beneficios End Gammers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-columna-2 columna">
+                    <h3 class="cinzel-enlaces">Ayuda</h3>
+                    <ul class="footer-enlaces" id="footer-enlaces-2">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href=" " class="fenlaces cinzel-enlaces">¿Cómo comprar?</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Fisico o Digital</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Como hacer los Canjes</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Medios de pagos habilitados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-columna-3 columna">
+                    <h3 class="cinzel-enlaces">Contacto</h3>
+                    <ul class="footer-enlaces" id="footer-enlaces-3">
+                        <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                        <li><a href=" " class="fenlaces cinzel-enlaces">Teléfono: xx-xxxx-xx</a></li>
+                        <li><a href=" " class="fenlaces cinzel-enlaces">xxxxx@gmail.com</a></li>
+                    </ul>
+                    <div class="footer-columna-3 columna-redes">
+                        <!-- Código https://fontawesome.com para iconos de redes sociales -->
+                        <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #7f59f3;"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook fa-xl" style="color: #5e7be2;"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp fa-xl" style="color: #e6c763;"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin fa-xl" style="color: #bb3ddb;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-columna-4 columna ">
+                    <h3 class="cinzel-enlaces">Ubicación</h3>
+                        <ul class="footer-enlaces" id="footer-enlaces-4">
+                            <!-- ul padre de los cinco li | necesito que ul ordene a sus hijos sobre un eje horizontal -->
+                            <li><a href=" " class="fenlaces cinzel-enlaces">Calle: xxxxxx</a></li>
+                        </ul>
+                        <div class="footer-columna-4 columna-mapa">
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  FIN DE FOOTER  -->
+        <!-- ********************************************************************** -->
+  </main>
+
+  <!-- Carrito Modal -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-modal-content">
+      <button id="closeCart" class="close-btn">X</button>
+      <h2>Tu Carrito</h2>
+      <ul id="cartItems"></ul>
+      <div id="cartTotal"></div>
+      <button id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+  <script src="./js/cart.js"></script>
+</body>
+
+</html>

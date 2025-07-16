@@ -19,9 +19,9 @@ form{
     justify-content: center;
     width: 40%;
     padding: 30px;
-    background-color: black;
+    background-color: rgb(88, 59, 151);
     border-radius: 5px;
-    color: #fff;
+    color: #202585;
     margin-top: 20px;
     margin-left: 30%;
 }
@@ -63,7 +63,7 @@ button{
     margin: auto;
     width: 100%;
     height:40px ;
-    background-color: #5d5b5b96;
+    background-color: #7fb2d496;
     border: none;
     cursor: pointer;
     border-radius: 20px;

@@ -1,30 +1,3 @@
-:root{
-    --blanco: #fff;
-    --fuente:'Quicksand', sans-serif;
-    --color-primario: #a274fd;
-    --color-primario2: #d2f1fb;
-    --color-borde: #9f73ff;
-}
-
-/* styles.css */
-body {
-   
-    background: #ffffff; /* Fondo blanco */
-    background: -webkit-linear-gradient(to right, #ffffff, #d1d1d1); /* Degradado incluyendo blanco */
-    background: linear-gradient(to right, #ffffff, #d1d1d1);
-    font-family: 'Roboto', sans-serif;
-    background-image: url('img/fondo.png');
-}
-#content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    
-   
-}
-
 #data-container {
     margin-top: 30px;
 }
@@ -40,6 +13,21 @@ body {
     background-color: var( --color-primario);
     text-align: center
 }
+   .top-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #1e90ff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
 #json-container {
     font-size: 50px; /* Ajusta este valor según sea necesario */
     font-family: monospace; /* Opcional: usa una fuente monoespaciada */

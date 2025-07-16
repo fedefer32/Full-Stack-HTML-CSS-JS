@@ -83,7 +83,7 @@ h1 {
 }
 
 .error_notify {
-    background-color: rgb(246, 255, 0);
+    background-color: rgb(68, 0, 255);
 }
 
 .error_notify.active {
